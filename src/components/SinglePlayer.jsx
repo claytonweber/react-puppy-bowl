@@ -1,21 +1,23 @@
 import React from 'react';
 import SearchBar from './SearchBar';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function SinglePlayer({ player }) {
     const navigate = useNavigate();
     // console.log(player);
     return (
         <div className="player-card">
-            <h2>{player.name}</h2>
             <button 
-            onClick={() => {
-                    navigate(`/players/${player.id}`);
-            }} >
+                onClick={() => {
+                        navigate(`/players/${player.id}`);
+                }} >
                 {player.name}
             </button>
+            {/* <button>
+                <Link to={`/players/${players.id}`}>Puppy Info</Link>
+            </button> */}
             <h4>{player.breed}</h4>
-            <img src={player.imageUrl} />
+            <img src={player.imageUrl} className="player-image" />
             
         </div>
     )

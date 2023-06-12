@@ -12,14 +12,14 @@ import './App.css'
 function App() {
   return (
     <>
-      <Home />
       <NavBar />
       <SearchBar />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/all-players" element={<AllPlayers />} /> */}
-        <Route path="players" element={<SearchBar />} />
-        <Route path='/players/:id' element={<SinglePlayer />} />
+        <Route path="/players" element={<SearchBar />} />
+        <Route path="/players/:id" element={<SinglePlayer />} />
+        {/* <Route path='/players/:id' element={<SinglePlayerCard />} /> */}
         
         {/* <Route path="/nav-bar" element={<NavBar />} /> */}
         {/* <Route path="/new-player-form" element={<NewPlayerForm />} />  */}
